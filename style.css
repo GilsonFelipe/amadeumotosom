@@ -1,0 +1,814 @@
+body {
+    background-color: rgb(10, 10, 10);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    background-color: rgb(12, 12, 12);
+    overflow: hidden;
+
+}
+
+
+.galeria {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.titulo {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.descricao_site {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 33.33%; /* Definindo 33.33% para exibir três imagens por vez */
+    margin-right: 10px; /* Espaçamento entre os slides */
+    transition: margin 0.3s ease;
+    overflow: hidden;
+}
+
+.slide video {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    overflow: hidden; /* Para manter a proporção e preencher o contêiner */
+   
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0; /* Defina a altura como 0 para manter a proporção */
+    padding-top: 223.25%; /* Proporção 16:9 para vídeos widescreen */
+    overflow: hidden; /* Evita que o vídeo ultrapasse os limites do contêiner */
+}
+
+.video-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Ocupa todo o espaço disponível no contêiner */
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Redimensiona o vídeo para preencher o contêiner mantendo a proporção */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+
+
+
+.prev,
+.next {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #555;
+}
+
+
+
+/* Estilo do scroll */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Largura do scroll */
+}
+
+/* Rastro do scroll */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Cor de fundo do rastro */
+}
+
+/* Cor do scroll */
+::-webkit-scrollbar-thumb {
+    background-color: #0800ff;
+    /* Cor azul para o scroll */
+    border-radius: 4px;
+    /* Borda arredondada do scroll */
+}
+
+/* Estilo quando hover no scroll */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0004ff;
+    /* Cor azul mais escura ao passar o mouse */
+}
+
+.titulo {
+    color: #FFFFFF;
+    margin-bottom: 1em;
+}
+
+.descricao_site {
+    color: #FFFFFF;
+    margin-bottom: 1em;
+    text-align: justify;
+    width: 80%;
+}
+
+.mobile-menu-container {
+    display: none;
+}
+
+.mobile-menu-icon {
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1em;
+}
+
+
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 0 2em 0 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(154, 154, 154);
+    padding: 2em;
+}
+
+.menu a.active {
+    color: #fff;
+}
+
+.contato {
+    padding: .9em 2em .9em 2em;
+    font-size: 1em;
+    font-weight: 300;
+    background-color: rgb(0, 21, 255);
+    border: none;
+    color: rgb(10, 10, 10);
+    border-radius: 1.5em;
+}
+
+.logo {
+
+    width: 10em;
+}
+
+
+nav {
+    padding: 1em;
+    overflow: hidden;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    overflow: hidden;
+
+
+}
+
+li {
+    padding: 0 2em 0 0;
+    overflow: hidden;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(154, 154, 154);
+    padding: 2em;
+}
+
+a:active {
+    color: #fff;
+}
+
+a:hover {
+    color: #0004ff;
+}
+
+.contato {
+    padding: .9em 2em .9em 2em;
+    font-size: 1em;
+    font-weight: 300;
+    background-color: rgb(0, 21, 255);
+    border: none;
+    color: rgb(10, 10, 10);
+    border-radius: 1.5em;
+    cursor: pointer;
+}
+
+.contato:hover {
+    background-color: rgb(0, 14, 170);
+}
+
+span {
+    color: blue;
+}
+
+.quem_somos {
+
+
+    padding: 4em 0;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+}
+
+.titulo {
+    font-size: 5em;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+    width: 100%;
+}
+
+.texto_principal {
+    width: 31%;
+    margin-bottom: 2em;
+
+}
+
+.amadeu {
+    max-width: 35em;
+    animation: floating 3s ease-in-out infinite;
+    margin-top: 2em;
+}
+
+p {
+    margin-top: 1em;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.trabalhos {
+    background-color: rgb(30, 30, 30);
+    padding: 2em 0;
+    text-align: center;
+    color: #fff;
+    align-items: center;
+}
+
+.galeria {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.item {
+    position: relative;
+    margin: 1em;
+    overflow: hidden;
+}
+
+.img_trabalho {
+    width: 18em;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta o comportamento do conteúdo da imagem */
+    transition: transform 0.3s ease-in-out;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.legenda {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 1, 12, 0.835);
+    color: #fff;
+    padding: 0.5em;
+}
+
+.audio {
+    display: none;
+}
+
+/* Estilos para a seção de orçamento */
+.orcamento {
+    color: #fff;
+    text-align: center;
+    padding: 3em 0;
+}
+
+.img_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3em;
+    border: #0004ff 2px solid;
+    margin: 2.2em;
+}
+
+.imagem_orcamento {
+    width: 30%;
+}
+
+h3 {
+    overflow: hidden;
+}
+
+
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 0.46em 1.6em;
+    border: 0.1em solid #000000;
+    margin: 0 0.2em 0.2em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1em;
+    color: #000000;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    background-color: #00ff88;
+    text-align: center;
+    transition: all 0.15s;
+    padding: 3em;
+    cursor: pointer;
+}
+
+.whatsapp-button:hover {
+
+    text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.avaliacoes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.avaliacao {
+    width: 30%;
+    /* Reduzi a largura dos cards para 30% */
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: rgba(0, 1, 12, 0.835);
+    border-radius: 1em;
+    text-align: center;
+    /* Centralizar o conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex_rede{
+    overflow: hidden;
+}
+
+.avaliacao p {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.avaliacao img {
+    width: 5em;
+    border-radius: 50%;
+    margin-bottom: 0.5em;
+}
+
+.estrelas {
+    color: #fdd835;
+    /* Cor amarela para as estrelas */
+    margin-bottom: 0.5em;
+    overflow: hidden;
+}
+
+.estrelas i {
+    font-size: 1.2em;
+    margin-right: 0.1em;
+}
+
+.avaliacao span {
+    font-weight: bold;
+    color: #fff;
+    overflow: hidden;
+    align-items: center;
+
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.rodape-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.logo-rodape {
+    width: 9em;
+    margin-bottom: 2em;
+    overflow: hidden;
+}
+
+.rodape-informacoes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.endereco,
+.redes-sociais {
+    flex: 1;
+    text-align: center;
+    padding: 0 1em;
+    overflow: hidden;
+
+}
+
+.redes-sociais h3 {
+    margin-bottom: 1em;
+}
+
+.redes-sociais a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s ease-in-out;
+    overflow: hidden;
+    margin-top: 2em;
+}
+
+.redes-sociais a:hover {
+    color: #00bfff;
+    overflow: hidden;
+}
+
+.contato-rodape {
+    margin-top: 1em;
+    overflow: hidden;
+}
+
+.direitos {
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+
+@media only screen and (max-width: 800px) {
+    header {
+        justify-content: space-evenly;
+        padding: 1em;
+    }
+
+    .logo {
+        margin-bottom: 0.5em;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: rgb(12, 12, 12);
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        padding: 1em;
+        border-bottom: 1px solid #fff;
+    }
+
+    .menu a {
+        font-size: 1.2em;
+    }
+
+    .mobile-menu-container {
+        display: block;
+    }
+
+    .contato {
+        display: none;
+    }
+
+    .quem_somos {
+        padding: 2em 1em;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .flex {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+    }
+
+    .texto_principal {
+        width: 90%;
+        margin-bottom: 1em;
+    }
+
+    .amadeu {
+        max-width: 60%;
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+
+    p {
+        margin-top: 1em;
+        font-size: 1em;
+        line-height: 1.6em;
+
+    }
+
+    .trabalhos {
+        font-size: 90%;
+        padding: 1em 0;
+    }
+
+    .titulo {
+        text-align: center;
+        font-size: 3.3em;
+    }
+
+    .galeria {
+        margin-top: 1em;
+    }
+
+    .item {
+        width: 90%;
+    }
+
+    .img_trabalho {
+        width: 100%;
+    }
+
+    .avaliacoes {
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .avaliacao {
+        width: 90%;
+        align-items: center;
+    }
+
+    .whatsapp-button {
+        display: block;
+        margin: 0.4em auto;
+    }
+
+    .img_btn {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .imagem_orcamento {
+        width: 21em;
+    }
+
+    footer {
+        padding: 1.5em 0;
+
+    }
+
+    .rodape-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .informacoes {
+        margin-top: 5em;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .logo-rodape {
+        margin-bottom: 0.5em;
+        align-items: center;
+    }
+
+    .endereco,
+    .contato {
+        text-align: center;
+        font-size: 0.3em;
+
+    }
+
+    .direitos {
+
+        font-size: 12px;
+        overflow: hidden;
+
+    }
+
+    .redes-sociais {
+        align-items: center;
+        overflow: hidden;
+
+
+    }
+
+    footer {
+        padding: 1.5em 1em;
+    }
+
+    .rodape-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        overflow: hidden;
+
+    }
+
+    .logo-rodape {
+        width: 20%;
+        /* Diminui a largura da logo */
+        margin-bottom: 1em;
+    }
+
+    .endereco {
+        font-size: 0.7em;
+    }
+
+    .redes-sociais {
+        white-space: nowrap;
+        overflow: hidden;
+
+        font-size: 80%;
+    }
+
+    .flex_rede{
+        overflow: hidden;
+    }
+
+
+
+
+
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 1224px) {
+    header {
+        padding: 1.5em;
+    }
+
+    .menu {
+        white-space: nowrap;
+    }
+
+    .contato {
+        display: none;
+    }
+
+    .quem_somos {
+        padding: 3em 2em;
+    }
+
+
+    .titulo {
+        font-size: 3em;
+    }
+
+    .texto_principal {
+        width: 35%;
+        margin-right: 2em;
+        margin-bottom: 0;
+    }
+
+    .amadeu {
+        max-width: 35%;
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.8em;
+    }
+
+    .rodape-container {
+
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .redes-sociais a {
+        margin: 0.5em auto;
+    }
+
+    .direitos {
+        margin-top: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+
+    img {
+        max-height: 800px;
+        /* Ajuste a altura conforme necessário */
+    }
+
+
+    .descricao_site {
+        width: 93%;
+    }
+}
